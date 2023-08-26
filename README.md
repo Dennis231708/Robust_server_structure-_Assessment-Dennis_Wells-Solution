@@ -65,16 +65,22 @@ Update a Short URL in postman
 
 Delete
 The following Postman screenshot shows a DELETE request to /urls/:urlId and the response from the server.
+![image](https://github.com/Dennis231708/Robust_server_structure-_Assessment-Dennis_Wells-Solution/assets/56503655/c26b5de1-7cb2-456e-ad83-e92f3d5a3afd)
+
 
 Delete a Short URL in postman
 
 List short URL uses
 The following Postman screenshot shows a GET request to /urls/:urlId/uses and the response from the server.
+![image](https://github.com/Dennis231708/Robust_server_structure-_Assessment-Dennis_Wells-Solution/assets/56503655/a0049aa4-8bda-4826-8820-1853dd575fc3)
+
 
 List Short URL uses's in postman
 
 Read short URL use
 The following Postman screenshot shows a GET request to /urls/:urlId/uses/:useId and the response from the server.
+![image](https://github.com/Dennis231708/Robust_server_structure-_Assessment-Dennis_Wells-Solution/assets/56503655/865d3a37-fcf7-408c-81ee-5649e5535e2e)
+
 
 List Short URL uses in postman
 
@@ -93,26 +99,36 @@ Create
 Creating use records through the API is not allowed. Use records are created as a side effect of a GET request to /urls/:urlId.
 
 The following Postman screenshot shows the data posted to /urls/:urlId and the response from the server.
+![image](https://github.com/Dennis231708/Robust_server_structure-_Assessment-Dennis_Wells-Solution/assets/56503655/9b34d583-788a-4f3e-9bf8-0e61c4bcc254)
+
 
 Create a use in postman
 
 Read
 The following Postman screenshot shows a GET request to /uses/:useId and the response from the server.
+![image](https://github.com/Dennis231708/Robust_server_structure-_Assessment-Dennis_Wells-Solution/assets/56503655/d1d63086-3038-42e6-b5a2-9ce4d78682cf)
+
 
 Read a use in postman
 
 Update
 The following Postman screenshot shows a PUT request to /uses/:useId and the response from the server.
+![image](https://github.com/Dennis231708/Robust_server_structure-_Assessment-Dennis_Wells-Solution/assets/56503655/e046278d-5434-4241-96a0-6e08b494fde7)
+
 
 Update a use in postman
 
 Delete
 The following Postman screenshot shows a DELETE request to /uses/:useId and the 204 response from the server.
+![image](https://github.com/Dennis231708/Robust_server_structure-_Assessment-Dennis_Wells-Solution/assets/56503655/415671bd-c264-4f37-ae5d-18fc36acd6c0)
+
 
 Delete a use in postman
 
 List
 The following Postman screenshot shows a GET request to /uses and the response from the server.
+![image](https://github.com/Dennis231708/Robust_server_structure-_Assessment-Dennis_Wells-Solution/assets/56503655/bd6bc8ef-b2d1-4edb-806b-7f1aa169bfb5)
+
 
 List uses in postman
 
