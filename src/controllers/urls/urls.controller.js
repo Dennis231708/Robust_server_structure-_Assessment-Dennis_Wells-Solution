@@ -94,14 +94,43 @@ function getUrlUseById(req, res) {
     const useIdNumber = parseInt(useId, 10);
 
     const url = urls.find(u => u.id === urlIdNumber);
-    const use = uses.find(u => u.id === useIdNumber && u.urlId === urlIdNumber);
+    const use = uses.find(u => u.id === useIdNumber);
 
-    if (!url || !use) {
-        return res.status(404).json({ error: "Use or URL not found" });
+    if (!url) {
+        return res.status(404).json({ error: `Url with id ${urlIdNumber} not found` });
     }
 
-    res.status(200).json({ data: use });
+    if (!use) {
+        return res.status(404).json({ error: `Use with id ${useIdNumber} not found` });
+    }
+
+    if (use.urlId !== urlIdNumber) {
+        return res.status(404).json({ error: `Use with id ${useIdNumber} not found for Url with id ${urlIdNumber}` });
+    }
+
+    return res.status(200).json({ data: use });
 }
+
+function updateUrlUse(req, res) {
+    res.status(405).json({ error: "PUT method not allowed" });
+}
+
+function deleteUrlUse(req, res) {
+    const { urlId, useId } = req.params;
+
+    const existingUse = uses.find(use => use.id === parseInt(useId, 10) && use.urlId === parseInt(urlId, 10));
+
+    if (!existingUse) {
+        return res.status(404).json({ error: `Use id ${useId} not found for url id ${urlId}` });
+    }
+
+    const index = uses.indexOf(existingUse);
+    uses.splice(index, 1);
+
+    res.status(204).end();
+}
+
+
 
 
 module.exports = {
@@ -116,4 +145,6 @@ module.exports = {
     createUrlUseWithId,
     deleteUrlUseWithId,
     getUrlUseById,
+    updateUrlUse,
+    deleteUrlUse,
 };
